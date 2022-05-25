@@ -110,7 +110,7 @@ data "aws_route53_zone" "public-zone" {
   private_zone = false
 }
 
-# Create AWS Route53 CNAME Record for the Load Balancer
+# Create AWS Route53 A Record for the Load Balancer
 resource "aws_route53_record" "linux-alb-a-record" {
   depends_on = [aws_lb.linux-alb]
 
